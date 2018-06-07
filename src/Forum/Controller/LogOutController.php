@@ -83,7 +83,7 @@ class LogOutController implements ControllerInterface
 
         $this->authenticator->logOut($session);
 
-        $actor->accessTokens()->delete();
+        //$actor->accessTokens()->delete();
 
         $this->events->fire(new UserLoggedOut($actor));
 
